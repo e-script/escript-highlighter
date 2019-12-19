@@ -1,0 +1,34 @@
+{
+  "name": "escript-highlighter",
+  "displayName": "escript highlighter",
+  "description": "escript syntax highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "escript",
+        "aliases": [
+          "escript",
+          "escript"
+        ],
+        "extensions": [
+          ".e"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "escript",
+        "scopeName": "source.e",
+        "path": "./syntaxes/escript.tmLanguage.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "escript",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#assignment1"
+    },
+
+    {
+      "include": "#invokes"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "support.class",
+          "match": "\\b(result|parent|params)\\b"
+        }
+      ]
+    },
+    "assignment1": {
+      "patterns": [
+        {
+          "name": "variable.name",
+          "match": "\\b[a-zA-Z0-9_\\.]*\\s*(?==)"
+        }
+      ]
+    },
+    "assignment2": {
+      "patterns": [
+        {
+          "name": "variable.name",
+          "match": "\\b[a-zA-Z0-9_\\.]*\\s*(?=+)"
+        }
+      ]
+    },
+    "invokes": {
+      "patterns": [
+        {
+          "name": "entity.name.function",
+          "match": "\\b[a-zA-Z0-9_\\.]*\\s*(?=\\()"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.escript",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.escript",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.e"
+}
